@@ -1,28 +1,54 @@
-# Angular specific
+# Compilación de Angular
 /dist/
 /out-tsc/
 /tmp/
-/coverage/
-/e2e/test-output/
-/.angular/
+/bazel-out/
+
+# Caché del CLI de Angular
 .angular/
 
-# Node modules and dependency files
+# Dependencias
 /node_modules/
-/package-lock.json
-/yarn.lock
 
-# Environment files
-/.env
+# Tests y cobertura
+/coverage/
+/e2e/test-output/
+/test-results/
+/playwright-report/
 
-# Angular CLI and build artefacts
-/.angular-cli.json
-/.ng/
+# Variables de entorno locales
+.env
+.env.*
+!.env.example
+src/environments/environment.local.ts
 
-# TypeScript cache
+# Caché de TypeScript
 *.tsbuildinfo
 
 # Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+
+# Editores e IDEs
+.idea/
+*.iml
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+.history/
+*.sublime-workspace
+*.swp
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Otros gestores de paquetes
+yarn.lock
+pnpm-lock.yaml
